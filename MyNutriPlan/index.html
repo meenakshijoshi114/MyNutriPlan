@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthTrack Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">       
+</head>
+<body class="bg-gray-50">
+
+     <!-- Login Page (initially shown)  -->
+
+    <div id="loginPage" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-teal-500 p-4">
+        <div class="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md">
+            <div class="text-center mb-8">
+                <div class="flex justify-center items-center space-x-2 mb-4">
+                    <i class="fas fa-heartbeat text-4xl text-blue-500"></i>
+                    <h1 class="text-3xl font-bold text-gray-800">MyNutriPlan</h1>
+                </div>
+                <p class="text-gray-600">Track your health journey with precision</p>
+            </div>
+            
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label for="loginEmail" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="loginEmail" required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                        placeholder="your@email.com">
+                </div>
+                <div>
+                    <label for="loginPassword" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="loginPassword" required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                        placeholder="••••••••">
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="rememberMe" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                        <label for="rememberMe" class="ml-2 block text-sm text-gray-700">Remember me</label>
+                    </div>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-500">Forgot password?</a>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Sign In
+                    </button>
+                </div>
+            </form>
+            
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600">
+                    Don't have an account? 
+                    <a href="#" id="showRegister" class="text-blue-600 hover:text-blue-500 font-medium">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+     <!-- Registration Page  -->
+
+    <div class="wrapper">
+    <div id="registerPage" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-teal-500 p-4 hidden">
+        <div class="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md">
+            <div class="text-center mb-8">
+                <div class="flex justify-center items-center space-x-2 mb-4">
+                    <i class="fas fa-heartbeat text-4xl text-blue-500"></i>
+                    <h1 class="text-3xl font-bold text-gray-800">Create Account</h1>
+                </div>
+                <p class="text-gray-600">Start your health journey today</p>
+            </div>
+            
+            <form id="registerForm" class="space-y-6">
+                <div>
+                    <label for="registerName" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" id="registerName" required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                        placeholder="username">
+                </div>
+                <div>
+                    <label for="registerEmail" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="registerEmail" required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                        placeholder="your@email.com">
+                </div>
+                <div>
+                    <label for="registerPassword" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="registerPassword" required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                        placeholder="••••••••">
+                    <p class="mt-1 text-xs text-gray-500">Minimum 8 characters</p>
+                </div>
+                <div>
+                    <label for="registerConfirmPassword" class="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
+                    <input type="password" id="registerConfirmPassword" required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition"
+                        placeholder="••••••••">
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Create Account
+                    </button>
+                </div>
+            </form>
+            
+            <div class="mt-6 text-center">
+                <p class="text-sm text-gray-600">
+                    Already have an account? 
+                    <a href="#" id="showLogin" class="text-blue-600 hover:text-blue-500 font-medium">Sign in</a>
+                </p>
+            </div>
+                      
+         </div> 
+    </div>
+    </div>
+
+    <!-- Main App (hidden by default) -->
+    <div id="appContainer" class="hidden">
+        <header class="bg-gradient-to-r from-blue-500 to-teal-500 text-white shadow-lg">
+            <div class="container mx-auto px-4 py-6">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-heartbeat text-3xl"></i>
+                        <h1 class="text-2xl font-bold">MyNutriPlan</h1>
+                    </div>
+                    <nav class="hidden md:flex space-x-6">
+                        <a href="#dashboard" class="hover:text-blue-200 transition">Dashboard</a>
+                        <a href="#tracker" class="hover:text-blue-200 transition">Tracker</a>
+                        <a href="#reminders" class="hover:text-blue-200 transition">Reminders</a>
+                        <a href="#calculator" class="hover:text-blue-200 transition">Calculator</a>
+                    </nav>
+                    <div class="flex items-center space-x-4">
+                        <div class="hidden md:block relative group">
+                            <button class="flex items-center space-x-1">
+                                <span id="userName" class="font-medium">User</span>
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                            <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden group-hover:block">
+                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Profile</a>
+                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Settings</a>
+                                <a href="#" id="logoutBtn" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Sign out</a>
+                            </div>
+                        </div>
+                        <button class="md:hidden text-2xl" id="menuBtn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="mobileMenu" class="mobile-menu md:hidden mt-4">
+                    <div class="flex flex-col space-y-3 py-3">
+                        <a href="#dashboard" class="hover:text-blue-200 transition">Dashboard</a>
+                        <a href="#tracker" class="hover:text-blue-200 transition">Tracker</a>
+                        <a href="#reminders" class="hover:text-blue-200 transition">Reminders</a>
+                        <a href="#calculator" class="hover:text-blue-200 transition">Calculator</a>
+                        <div class="border-t border-blue-400 pt-2">
+                            <a href="#" class="block hover:text-blue-200">Profile</a>
+                            <a href="#" class="block hover:text-blue-200">Settings</a>
+                            <a href="#" id="mobileLogoutBtn" class="block hover:text-blue-200">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="container mx-auto px-4 py-8">
+            <!-- User Profile Section -->
+            <section id="dashboard" class="mb-12 bg-white rounded-xl shadow-md p-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Your Health Dashboard</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-4">Medical Information</h3>
+                        <form id="medicalForm" class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Age</label>
+                                <input type="number" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" id="age" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Weight (kg)</label>
+                                <input type="number" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" id="weight" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Height (cm)</label>
+                                <input type="number" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" id="height" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Medical Conditions</label>
+                                <textarea class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" id="conditions" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Save</button>
+                        </form>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-green-800 mb-4">Fitness Goals</h3>
+                        <form id="goalsForm" class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2">Primary Goal</label>
+                                <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" id="primaryGoal" required>
+                                    <option value="">Select your goal</option>
+                                    <option value="weight-loss">Weight Loss</option>
+                                    <option value="muscle-gain">Muscle Gain</option>
+                                    <option value="maintenance">Maintenance</option>
+                                    <option value="improve-endurance">Improve Endurance</option>
+                                    <option value="improve-flexibility">Improve Flexibility</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Target Weight (kg)</label>
+                                <input type="number" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" id="targetWeight">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Weekly Exercise Goal (hours)</label>
+                                <input type="number" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" id="exerciseGoal" min="0" max="20">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">Additional Notes</label>
+                                <textarea class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" id="goalNotes" rows="2"></textarea>
+                            </div>
+                            <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">Save Goals</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Personalized Instructions  -->
+
+                <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Your Personalized Health Plan</h2>
+                    <div id="instructions" class="bg-purple-50 p-6 rounded-lg">
+                        <p class="text-gray-700">Complete your medical information and goals to receive personalized instructions.</p>
+                    </div>
+                </section>
+
+                <!-- Reminders Section -->
+                <section id="reminders" class="mb-12 bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Health Reminders</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-yellow-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-yellow-800 mb-4">Set Reminders</h3>
+                            <form id="reminderForm" class="space-y-4">
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Reminder Type</label>
+                                    <select class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-500" id="reminderType" required>
+                                        <option value="">Select type</option>
+                                        <option value="medication">Medication</option>
+                                        <option value="exercise">Exercise</option>
+                                        <option value="water">Water Intake</option>
+                                        <option value="meal">Meal</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Time</label>
+                                    <input type="time" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-500" id="reminderTime" required>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Message</label>
+                                    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-yellow-500" id="reminderMessage" required>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="repeatReminder" class="mr-2">
+                                    <label for="repeatReminder" class="text-gray-700">Repeat daily</label>
+                                </div>
+                                <button type="submit" class="bg-yellow-600 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition">Add Reminder</button>
+                            </form>
+                        </div>
+                        <div class="bg-orange-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-orange-800 mb-4">Your Reminders</h3>
+                            <ul id="remindersList" class="space-y-3">
+                                <li class="text-gray-700 italic">No reminders set yet</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Calorie & Water Tracker -->
+                <section id="calculator" class="mb-12 bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Nutrition Tracker</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-red-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-red-800 mb-4">Calorie Calculator</h3>
+                            <form id="calorieForm" class="space-y-4">
+                                <div class="relative">
+                                    <label class="block text-gray-700 mb-2">Food Item</label>
+                                    <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500" id="foodItem" required>
+                                    <div id="foodSuggestions" class="hidden mt-1 bg-white border rounded-lg shadow-lg absolute z-10 w-full max-h-60 overflow-auto"></div>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Quantity (grams)</label>
+                                    <input type="number" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500" id="foodQuantity" value="100" required>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2">Calories (auto-calculated)</label>
+                                    <input type="number" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 bg-gray-100" id="foodCalories" readonly>
+                                </div>
+                                <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition">Add Food</button>
+                            </form>
+                            <div class="mt-6">
+                                <h4 class="font-semibold text-gray-800 mb-2">Today's Intake</h4>
+                                <div class="bg-white p-4 rounded-lg shadow-inner">
+                                    <p>Total Calories: <span id="totalCalories">0</span> kcal</p>
+                                    <p>Remaining: <span id="remainingCalories">2000</span> kcal</p>
+                                    <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
+                                        <div id="calorieProgress" class="bg-red-600 h-4 rounded-full" style="width: 0%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h4 class="font-semibold text-gray-800 mb-2">Today's Food Log</h4>
+                                <ul id="foodLog" class="space-y-2">
+                                    <li class="text-gray-700 italic">No food logged yet</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-cyan-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-cyan-800 mb-4">Water Intake Tracker</h3>
+                            <div class="text-center mb-6">
+                                <div class="inline-block relative">
+                                    <div class="w-40 h-60 bg-blue-100 rounded-lg border-2 border-blue-300 overflow-hidden">
+                                        <div id="waterLevel" class="water-glass bg-blue-400 w-full rounded-b-lg transition-all duration-500" style="height: 0%"></div>
+                                    </div>
+                                    <div class="absolute bottom-0 left-0 right-0 text-center py-2">
+                                        <span id="waterAmount">0</span> / <span id="waterGoal">2000</span> ml
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button class="water-btn bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition" data-amount="250">+250ml</button>
+                                <button class="water-btn bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition" data-amount="500">+500ml</button>
+                                <button class="water-btn bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition" data-amount="750">+750ml</button>
+                            </div>
+                            <div class="mt-4">
+                                <label class="block text-gray-700 mb-2">Daily Water Goal (ml)</label>
+                                <input type="number" id="waterGoalInput" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-cyan-500" value="2000">
+                                <button id="updateWaterGoal" class="mt-2 bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-cyan-700 transition">Update Goal</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="bg-gray-800 text-white py-8">
+                <div class="container mx-auto px-4 text-center">
+                    <p>&copy; 2025 HealthTrack Pro. All rights reserved.</p>
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="#" class="hover:text-blue-300 transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-pink-500 transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Server-side script (simulated with localStorage) -->
+        <script src="script.js"> </script>         
+       
+    </body>
+    </html>
